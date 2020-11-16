@@ -1,0 +1,18 @@
+*{ margin:0; padding:0; list-style:none;}
+body {
+    background-color: #ccc;
+}
+img{ border:0;}
+#zzsc{ height:auto; width:820px;margin:10px auto; overflow:hidden;}
+#zzsc ul li{ width:396px; height:251px;float:left; margin:0px 10px 10px 0px; position:relative;}
+#zzsc ul li .text{ width:100%; height:0;position:absolute; left:0; bottom:0; background:rgba(241, 150, 45, 0.9); font-size:12px; color:#fff;}
+/* 隐藏滚动条 */
+#zzsc ul li .text{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#zzsc ul li .text::-webkit-scrollbar {
+    display: none;
+}
+#zzsc ul li .text p{text-align:left; color:#fff; line-height:180%; padding:5px 10px; clear:both;}
+#zzsc ul li .text b{ display:block; padding:5px 10px; display:block; float:left; background:#333; margin-bottom:5px;color:#fff}
