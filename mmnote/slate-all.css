@@ -1,0 +1,349 @@
+
+@font-face { font-family: Roboto; src: url(Roboto-Light.ttf) } 
+
+ /*主页标题div框*/
+* {
+    margin: 0;
+    /*padding: 0;这个在此暂不能用，会令有一个功能层次不正常显示*/
+}
+body .zt {
+    position: fixed;
+    right:16.5%; 
+    top: 0;
+    width: 53.5%;
+    /*标题div居中（83.5%占满主页-预算30%，再向右靠15%为居中）*/
+    margin-right: 15%;
+    text-align: center;
+}
+/*主页标题文字*/
+.zt p {
+    display: block;
+    height: 36px;
+    font-size: 22px;
+    line-height: 36px;
+    border-radius: 18px;
+    background: #7FFFAA;/*#F5F5F5 rgba(230,230,230, .4)*/
+    font-weight: bold;
+    box-shadow: 2px 3px 3px rgba(0,0,0, .2);
+    /* 溢出省略 */
+    white-space: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*主页*/
+    body {
+        width: 100%;
+        max-width: 960px;
+        min-width: 320px;
+        margin: 0 auto !important;
+    }
+    .row {
+        display: flex;
+    }
+    .div2 {
+        width: 330px;
+        height: 100%;
+        background-color: pink;
+        box-sizing: border-box;
+        /* 溢出省略 */
+        white-space: hidden;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: flex;
+    }
+    /*ul*/
+    .dropdown {
+        flex: 0.96;
+    }
+    ul.dropdown.tendina {
+        padding: 10px 5px 0px;
+    }
+    /*ul内的右边显示隐藏控制线*/
+    @media screen and (min-width: 760px) {
+        .nav-box {
+            flex: 0.05;
+            background-color: #ccc;
+            cursor: pointer;
+            background: blue;
+            /*background: rgba(0, 0, 0, .3);*/
+        }
+    }
+    @media screen and (max-width: 760px) {
+        .nav-box {
+            flex: 0.05;
+            background-color: #ccc;
+        }
+    }
+    
+    .if {
+        flex: 1
+        height: 100%;
+    }
+    body#md {
+        font-weight: 400;
+        font-size: 13px;
+        font-family: Arial, Helvetica, "sans serif";
+        text-align: left;/*left*/
+        margin-top: 0px;
+        line-height: 150%;/*150%*/
+        padding: 0;/*修复body左边的20px的空档*/
+    }
+    /*video的外框div*/
+    body#md .vid {
+        text-align: center;
+    }
+/* 侧边栏参数Darkmode, wide screen: TOC on side */
+    .md .longTOC2 {   
+        width: 50%; 
+    }
+
+/* 侧边栏参数Darkmode, wide screen: TOC on side */
+@media screen and (min-device-width: 180px) {
+    .md .longTOC {
+        display: block;
+        /*强制一行文字*/
+        white-space: nowrap; 
+        /*侧边栏就最大的宽度*/
+        max-width: 200px;  
+        height: 60%; 
+        overflow: auto;
+        font-family: inherit;
+        position: fixed;
+        right: 0px;
+        top: 10%; 
+        margin-right: 10px;
+        background-color: #EAC976;
+        /*背景的透明度*/
+        /*background: rgba(234, 201, 118, .6);*/
+        -webkit-box-shadow: 0 0 10px #CCC;  
+        -moz-box-shadow: 0 0 10px #CCC;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .8);  
+        z-index: 9999;
+        box-sizing: border-box;
+        border-radius: 10px 0 0 10px; 
+        border-top: 2px solid #fff;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+    }
+    .longTOC p {
+        white-space: hidden;
+        overflow: hidden;
+        text-overflow: ellipsis;
+} 
+/*标题*/
+@media screen and (min-width: 760px) {
+    .md h1 {
+        font-size: 220%; 
+        font-weight: 700;
+    }
+    .md h2 {
+        font-size: 200%; 
+        font-weight: 650;
+    }
+    .md h3 {
+        font-size: 160%; 
+        font-weight: 600;
+    }
+    
+    .md h4 {
+        font-size: 130%; 
+        font-weight: 550;
+    }
+    
+    .md h5 {
+        font-size: 120%; 
+        font-weight: 550;
+        color: rgba(0,0,0,.7);
+        /*文字变换为大写字母*/
+        text-transform: uppercase;
+        color: #d23123;
+    }
+    .md h6 {
+        color: green;
+        font-size: 110%; 
+        font-weight: 550;
+    }
+    }
+}
+    
+
+/* faint border below headings （标题加下划线及线样式）*/
+.md h1, .md h2, .md h3, .md h4, .md h5, .md h6,
+.md .nonumberh1, .md .nonumberh2, .md .nonumberh3, .md .nonumberh4, .md .nonumberh5, .md .nonumberh6 {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+/* no numbering of headings（主页标题前不显示数值） */
+    .md h1:before, .md h2:before, .md h3:before, .md h4:before, .md h5:before, .md h6:before { content: none; }
+
+/*TOC标题数值隐藏*/
+.md .tocNumber {
+    display: none;
+}
+
+/*TOC字体颜色*/
+.md .longTOC a, .md .mediumTOC a, .md .shortTOC a {
+    color: black;
+}
+
+/*左边栏链接字体大小*/
+.md .longTOC .level1, .md .mediumTOC .level1, .md .shortTOC .level1,
+.md .longTOC .level2, .md .mediumTOC .level2, .md .shortTOC .level2,
+.md .longTOC .level3, .md .mediumTOC .level3, .md .shortTOC .level3 {
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    /* font-size: 100%; */
+}
+
+/* 侧边标题文字大小Dark mode with side TOC on screen */
+@media screen and (max-width: 460px) {
+    .md div.longTOC {
+        font-size: 16px;
+        line-height: 150%;
+    }
+} 
+/*TOP内联标记*/
+@media screen {.md .tocTop {
+    display: inline;
+    }}
+
+/*左铡头部标题字的大小与间距*/
+.md .tocHeader {
+    border: none;
+    margin: 0;
+    font-size: 100%;/*130%*/
+    font-family: inherit;
+    font-weight: 700;
+    padding-top: 0;/*10*/
+}
+
+/* inline and block code */
+    .md code, .md pre.listing {
+        background-color: rgba(0,0,0,.05);
+        padding: 0.1em 0.2em;
+        border-radius: 0.15em;
+    }
+
+    .md pre.listing code {
+        background-color: transparent;
+        padding: 0;
+        border: none;
+    }
+
+.md pre.listing {
+    /*font-size: 100%;*/
+    background-color: rgba(0,0,0,.05);
+    padding: 0.1em 0.2em;
+    border-radius: 0.15em;
+}
+
+    /* 表格的文字大小tables; use fainter colors than regular markdeep style */
+    .md table.table {
+        font-size: 90%;
+    }
+    .md table.table th {
+        font-size: 120%;/*表头的文字大小*/
+        border: none;
+        background-color: #ccc;
+        color: rgba(0,0,0,.6);
+    }
+    .md table.table tr, .md table.table td {
+        border-color: #eee;
+    }
+    .md table.table tr:nth-child(even) {
+        background-color: #f4f4f4;
+    }
+    /*去掉点击时出现的边框线*/
+    .md details,summary {
+    outline: none;
+    }
+
+    .md .de02 {
+        text-indent: 2em;
+        }
+/*显示手指*/
+    .md summary:hover {
+    cursor: pointer;
+    }
+    .md div.afterTitles {
+        margin: 0.4em 0 0 0;/*0.4em*/
+        padding: 0;
+        text-align: inherit;
+    }
+
+    .side {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 100%;
+        cursor: pointer;
+        background: rgba(0, 0, 0, .3);
+        z-index: 9999;
+    }
+
+/*以下是ahui注*/
+dd {
+    text-indent: 1em;
+}
+h2, i {
+    /* display: none; *//*去除标题img*/
+    font-size: 0;
+}
+@media screen and (min-width: 760px) {
+    .vid-x {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 760px) {
+    .vid-x {
+        max-width: 100%;
+        min-width: 320px;
+    }
+}
+
+.vid-y {
+    width: 100%;
+    max-width: 414px;
+    min-width: 320px;
+}
+
+@media screen and (max-width: 760px) {
+    .longTOC {
+        /*width: 67px;*/
+        overflow-x: hidden;
+        overflow:-y: scroll; 
+    }
+    .longTOC::-webkit-scrollbar {
+    display: none;
+}
+}
+.tp {
+    margin-right: 8px;
+    border: 2px solid #8F8F8F;
+    width: 50px;
+}
+.tp:hover {
+    border: 2px solid #fff;
+}
+/*返回顶部置最高层*/
+.top {
+    z-index: 9999;
+}
+
+@media screen and (max-width: 760px) {
+    .md h1 {
+        font-size: 160%;
+        font-weight: 550;
+    }
+    .md h2 {
+        font-size: 140%;
+        font-weight: 550;
+    }
+    .md h3 {
+        font-size: 120%;
+        font-weight: 550;
+    }
+}
