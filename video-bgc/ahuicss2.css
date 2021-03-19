@@ -1,0 +1,76 @@
+* {
+      margin: 0; padding: 0;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    #container {
+      overflow: hidden;
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+    }
+
+    #background_video {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      height: 100%; width: 100%;
+    }
+    #video_cover {
+      position: absolute;
+      width: 100%; height: 100%;
+      background: url('https://cdn.jsdelivr.net/gh/cshgjy/jsDelivr-img/video-bgc/video_cover.jpeg') no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    #video_controls {
+      position: absolute;
+      left: 95%;
+      transform: translate(-50%, 0);
+    }
+
+    #play img {
+      width: 100px;
+    }
+    #pause img {
+      width: 90px;
+    }
+    #pause {
+      display: none;
+    }
+    /*屏幕在大于768px时候隐藏视频开关*/
+    /*@media (min-width: 768px) {
+      #video_controls {
+        display: none;
+      }
+    }*/
+    /*背景视频透明色*/
+    #overlay {
+      position: absolute;
+      top: 0; right: 0; left: 0; bottom: 0;
+      background: rgba(0,0,0,0.0);
+    }
+    #main_content {
+      z-index: 2;
+      position: relative;
+      display: inline-block;
+      left: 10px;
+      top: 10px;
+      font-size: 20px;
+      color: white;
+    }
+    a {
+      color: white;
+      font-size: 12px;
+    }
+    details summary {
+      text-align: left;
+      outline: none;
+    }
+    .dv {
+      margin: 10px 0 0 20px;
+    }
