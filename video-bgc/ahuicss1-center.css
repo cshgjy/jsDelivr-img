@@ -39,7 +39,7 @@
     #pause {
       display: none;
     }
-    @media (min-width: 768px) {
+    @media (max-width: 768px) {
       #video_controls {
         display: none;
       }
