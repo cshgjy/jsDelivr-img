@@ -1,0 +1,72 @@
+   * {
+     box-sizing: border-box;
+   }
+   ul {
+    list-style: none;
+   }
+   #faq {
+    font-size: 12px;
+   }
+   #faq li {
+    margin: 0 0 3px;
+    padding: 0 0 3px;
+   }
+   #faq dl {
+    margin: 0;
+    padding:0;
+    display:inline;
+   }
+   #faq dt {
+    font-weight:bold;
+    cursor:pointer;
+    line-height: 16px;
+    /* border-bottom:1px #ccc dotted; */
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+    color: white;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+   }
+   #faq dd {
+    display: block;
+    float:left;
+    display:none;
+    padding: 8px 0 2px 8px;
+    margin: 5px 0;
+    background:#E5ECF9;
+   }
+   a {
+    font-size: 12px;
+    color: green;
+    margin: 0 8px 3px 0;
+  }
+  p {
+    margin-right: 8px;
+  }
+  #main_content {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  #wrapper {
+    text-align: center;
+  } 
+  #video_controls img {
+    opacity: 0.05;
+  }
+  /* 文本内容css */
+  .t-bj {
+    /* display: block; */
+    margin: 0 2px;
+    border-radius: 3px;
+    border: 1px solid #dadbdb;
+    background-color: #e2e2e2;
+  }
+  .txt {
+    text-align: left;
+  }
+  p {
+    margin-bottom: 3px;
+  }
+
