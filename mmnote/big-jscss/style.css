@@ -1,0 +1,103 @@
+@import "https://www.jq22.com/jquery/font-awesome.4.7.0.css";
+/*外框分区*/
+body {
+  position: relative;
+  overflow-x: hidden;
+  padding: 0; 
+  margin: 0;  
+}
+body,
+html {
+  height: 100%;
+  background-color: pink;
+}
+#wrapper {
+      position: relative;
+      display: flex;
+      /*background-color: pink;*/
+      height: 100%;
+}
+.nav-side {/*导航栏的侧边条*/
+  /*flex: 0.03;*/
+  width: 10px;
+  background: rgba(0, 0, 0, .3);
+  z-index: 9990;
+  cursor: pointer;
+}
+.div2 {/*导航栏框架*/
+  /*flex: 0.17;*/
+  width: 270px;
+  background-color: #FCE58B;
+}
+.row {/*iframe的外框架*/
+  flex: 1;
+  height: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 0 10px 0 10px;
+}
+.toggled {
+    display: none;
+  }
+
+ul {
+  padding: 0 10px 0 26px;
+}
+ul li {
+  list-style: none;
+}
+dd {
+  margin-left: 14px;
+}
+a, summary {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #585858;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+summary {
+  cursor: pointer;
+  outline: none;
+}
+/* 在pc端显示的字体大小 */
+.dropdown .one {
+  font-size: 17px;
+  font-weight: 550;
+  color: #587983;
+}
+.dropdown .two{
+  font-size: 15px;
+}
+.dropdown li a {
+  font-size: 12px;
+  color: #547b86fa;
+}
+/* 在移动端显示的字体大小 */
+@media screen and (max-width: 760px) {
+  .dropdown .one {
+    font-size: 22px;
+    font-weight: 550;
+    color: #587983;
+  }
+}
+@media screen and (max-width: 760px) {
+  .dropdown .two, .tree {
+    font-size: 19px;
+  }
+}
+/*ul*/
+.dropdown {
+  box-sizing: border-box;
+  padding: 0 5px 0 10px;
+}
+.dropdown ul a {
+  color: rgb(92, 91, 91);
+  display: block;
+  text-align: left;
+}
