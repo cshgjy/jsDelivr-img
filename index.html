@@ -1,0 +1,147 @@
+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+<script src="https://cdn.jsdelivr.net/gh/cshgjy/jsDelivr-img/jscss-20210305122259/jquery-1.11.1.min.js"></script><!-- jscss-20210305122259 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cshgjy/jsDelivr-img/jscss-20210305122259/poptrox.css"><!-- jscss-20210305122259 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cshgjy/jsDelivr-img/mmnote/slate-all.css"><!--或slate-allimg.css-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cshgjy/jsDelivr-img/mmnote/imgtex.css"><!-- imgtex【1/4】-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cshgjy/jsDelivr-img/mmnote/mm-win.css"><!--win【1/5】-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<a href="javascript:scroll(0,0)" style="position:fixed;float:right;right:3%;top:80%;text-decoration: none;" class="top"><img src="https://t1.picb.cc/uploads/2022/01/26/f3wAQF.png"  height="50px" width="50px" title="返回顶部" /></a>
+<div class="side"></div><!-- 侧边栏开关边控制条 -->
+<!-- <div style="text-align: center;"> -->
+<!-- 记住：
+    1、slate-all.css和markdeep.min.js下载: https://wwa.lanzous.com/b01bucbef (不含文件：imgtex)
+    2、<img src=".jpg" class="tp"><i>a01</i>【侧边栏“图片标题---”】
+    3、“图文”的正文内容为so：imt  
+    4、“网页/视频（弹窗）”的正文内容为so：win
+    *5、win框架内容【输入mdwintop】
+    *6、win弹窗内容【输入mdwincontent】
+    *7、class="vid-y" 与 class="vid-x" 是否替换?【输入mdvideo】
+    *8、动态显示模板【输入mdwinanimation】
+    *注：一、5-6-7-8为mdwin整套文件，整套下载地址为：https://pan.baidu.com/s/1v8J_P8zWP_bxumOiwLsgGA  提取码：手机号前4位-->
+<!-- ****************以下是正文内容**************** -->
+
+git的常用命令
+
+	$ :wq （恢复正常）
+    $ git config --list//查看git的配置
+    $ ls -a //查看文件夹内所有内容
+    $ git init //初始化（加入git）
+    $ git add . （或者git commit -a）
+    $ git commit -m "up"
+    $ git push origin master //master为要提交代码的分支名（$ git remote origin add http://...）
+    $ git pull //拉代码
+    $ git status //查看有什么内容未提交
+    $ git rm [文件名]
+
+		重设回之前的版本：
+    $ git reset --hard HEAD^ // 上一个版本就是HEAD^，上上一个版本就是HEAD^^
+    $ git reset --hard 1094a // 去任意一个git上存在得版本，输入版本号。版本号没必要写全，前几位就可以了（hard是指回滚掉三个区到指定版本）
+    $ git reset --soft 1094a // soft指回滚归档区，未commit
+				// --mixed指滚回“未add.的状态，显示已 增、改、删 内容的痕迹。”
+				// --soft指回滚到“已增-改-删 ，但未add .环节）*
+				// --hard 指“工作区-缓冲区add-归档区commit”（回退某次所有“增-删-改”文件或内容）
+		$ git revert xxx //commit后，回退前第3次以上所修改的内容，待确认修改新内容（可以在这步时回退上一次的修改内容）
+
+    分支：
+    $ git branch //查看branch，就只剩下master分支了 //（git branch -v // 查看分支 / git branch -vv // 查看分支与远程分支的关系）
+    $ git checkout [master] //切换回master分支
+
+    创建并切换到新分支：
+    git checkout -b xxx （xxx是分支名）
+    git switch -c / git switch --create
+
+    删除分支：
+    git branch -d xxx // 删除
+    git branch -D xxx // 强行删除
+    git branch --move old_branch_name new_branch_name // 修改分支名
+
+    差异比较：
+    git diff branchXXX // 与某分支进行比较
+    git diff --staged // 与暂存区的文件进行比较
+
+    合并分支操作：
+    $ git merge xxx
+
+    重设回之前的版本：
+    $ git reset --hard HEAD^ // 上一个版本就是HEAD^，上上一个版本就是HEAD^^
+    $ git reset --hard 1094a // 去任意一个git上存在得版本，输入版本号。版本号没必要写全，前几位就可以了（hard是指回滚掉三个区到指定版本）
+    $ git reset --soft 1094a // soft指回滚归档区commit
+
+    查看git的版本：
+    $ git --version
+
+    查看提交历史
+    $ git log
+    $ git log --stat // 查看简短的历史信息
+    $ git log --graph // 以图形的方式显示历史
+    $ git log --since=2.weeks //显示两周内的提交历史
+    $ git log branchA..branchB // ..表示branchA到branchB所需要的commit，可以比较分支的差异
+
+    查看提交的日志
+    git reflog
+
+    将本地修改放到修改暂存区
+    git stash / git stash push
+
+    将本地修改从修改暂存区取出
+    git stash pop
+    git stash list // 查看修改暂存区列表内容
+    git stash branch newBranchXXX // 将暂存区的内容适配到新开的分支中
+    git clean -df // 清理暂存区的内容 -d表示目录，-f表示文件
+
+    将本地分支推到远程分支
+    git push origin xxx
+    git pusj --set-upstream origin xxx // 与某个远程分支建立联系
+    git push origin --delete xxx // 删除远程分支
+
+    git fetch 获取远程是否有更新
+
+    查看远程信息：
+    git remote
+    git remote -v // 读写远程仓库
+    git remote show // 获取更多远程信息
+
+    生成用户配置信息：
+    git config --global user.email "xxx@email.com"
+    git config --global user.name "xxxx"
+    (ssh-keygen -t rsa -C "xx@email.com")
+
+    Q //退出到原来可输入内容的状态
+
+<!-- ***************以上是正文内容 *************** -->
+<!--</div>-->
+<script src="https://cdn.jsdelivr.net/gh/cshgjy/jsDelivr-img/mmnote/markdeep.min.js" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/gh/cshgjy/jsDelivr-img/mmnote/slate-all.js" charset="utf-8"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script><!--imgtex【3/4】-->
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script><!--win【3/5】-->
+<script src="https://cdn.jsdelivr.net/gh/cshgjy/jsDelivr-img/mmnote/jquery.poptrox.min.js"></script><!--win【4/5】-->
+<!-- 开关longTOC -->
+<script>
+    $(function () {
+        $(".side").click(function () {
+            $(".longTOC").toggle(100);
+        })
+    });
+</script>
+<!--imgtex【4/4】-->
+<script>
+    $(function () {
+        $('#zzsc li').hover(function () {
+            $('.text', this).stop().animate({
+                height: '210px'
+            });
+        }, function () {
+            $('.text', this).stop().animate({
+                height: '0'
+            });
+        });
+    });
+</script>
+<!-- win【5/5】-->
+<script>
+    $(function () {
+        $("#gallery").poptrox({
+            usePopupCaption: true
+        });
+    });
+</script>
