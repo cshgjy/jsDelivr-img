@@ -7,7 +7,7 @@
 }
 body {
     height: 100vh;
-    background: linear-gradient(45deg, #bfbfbf, #e6e6e6);
+    /*background: linear-gradient(45deg, #bfbfbf, #e6e6e6);*/
     /* 
     整页范围正中阴影文字
     display: flex;
@@ -32,5 +32,5 @@ body {
     letter-spacing: 5px;
     color: #e6e6e6;
     text-align: center;
-    text-shadow: 1px -1px #fff, -1px 1px #999, -10px 10px 5px #80808080;
+    text-shadow: 2px -2px #fff, -2px 2px #999, -5px 5px 3px #80808080;
 }
